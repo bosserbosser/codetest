@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+declare -a arr1
+arr1[0]=x
+arr1[1]=y
+arr1[2]=z
+echo 'arr1.len='${#arr1[*]}
+echo 'arr1='${arr1[@]}
+echo 'arr1='${arr1[*]}
+echo 'arr1='${!arr1[@]}
+echo 'arr1='${!arr1[*]}
+echo 'arr1[1]='${arr1[1]}
+arr1=m
+echo 'arr1[1]='${arr1[1]}
+echo 'arr1[0]='${arr1[0]}
+
+arr2=(x y z)
+arr2=m
+echo 'arr2[1]='${arr2[1]}
+echo 'arr2[-1]='${arr2[-1]}
+echo 'arr2[-3]='${arr2[-3]}
+echo 'arr2='${arr2}
+
+arr3[1]=x
+arr3[2]=y
+arr3[3]=z
+arr3[9]=p
+echo 'arr3='${arr3[@]}
+echo 'arr3='${!arr3[@]}
+echo 'arr3[1]='${arr3[1]}
+echo 'arr3[9]='${arr3[9]}
+echo 'arr3[0]='${arr3[0]}
+echo 'arr3[7]='${arr3[7]}
+echo 'arr3[-1]='${arr3[-1]}
+echo 'arr3[-2]='${arr3[-2]}
+echo 'arr3[-7]='${arr3[-7]}
+
+declare -A arr4
+arr4[name]=bosser
+arr4[age]=27
+arr4[sex]=1
+echo 'arr4='${arr4[@]}, 'name='${arr4[name]}, 'age='${arr4[age]}, 'sex='${arr4[sex]}
+
+arr5=("a b c" "d e f" "g h i")
+echo -n 'arr5[*]: '; for val in ${arr5[*]}; do echo -n '"'$val'", '; done; echo ""
+echo -n 'arr5[*]: '; for val in ${arr5[@]}; do echo -n '"'$val'", '; done; echo ""
+echo -n 'arr5[*]: '; for val in "${arr5[*]}"; do echo -n '"'$val'", '; done; echo ""
+echo -n 'arr5[@]: '; for val in "${arr5[@]}"; do echo -n '"'$val'", '; done; echo ""
+echo 'arr5='${!arr5[*]}
+echo 'arr5='${!arr5[@]}
+echo 'arr5.len='${#arr5[*]}
+echo 'arr5.len='${#arr5[@]}
+

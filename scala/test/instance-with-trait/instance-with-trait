@@ -1,0 +1,16 @@
+#!/usr/bin/env scala
+
+trait Base {
+	def next(): Int;
+	def hasnext(): Boolean;
+}
+
+class A;
+
+val obj:Base = new A with Base {
+	def next(): Int = 1;
+	def hasnext(): Boolean = true;
+}
+
+println(obj.next)
+

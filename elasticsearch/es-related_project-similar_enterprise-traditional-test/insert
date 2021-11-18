@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+
+from common import *
+
+def insert():
+    for line in open('bidding_enterprise.bcp'):
+        fields = line.split()
+        if len(fields) == 2:
+            ent_id, ent_name = fields
+            doc_id = ent_id
+            body = {
+                "type": doc_type_parent,
+                "name": ent_name,
+                "type_join_field": { "name": doc_type_parent }
+            }
+            es_cli.index(index=index_name, id=doc_id, body=body)
+    for line in open('related_project_reason.bcp'):
+        fields = line.split()
+        if len(fields) == 6:
+            doc_id, ent_id, subject, subject_time, ahead_subject, ahead_subject_time = fields
+            body = {
+                "type": doc_type_child,
+                "nameId": ent_id,
+                "subjectMatter": subject,
+                "aheadSubjectMatter": ahead_subject,
+                "subjectMatterLatestTime": subject_time,
+                "aheadSubjectMatterLatestTime": ahead_subject_time,
+                "type_join_field": { "name": doc_type_child, "parent": ent_id }
+            }
+            es_cli.index(index=index_name, id=doc_id, body=body, routing=ent_id)
+
+
+if __name__ == '__main__':
+    insert()
+

@@ -1,0 +1,15 @@
+
+Any:
+	AnyVal:
+		Num types
+		Char
+		Boolean
+		...
+	AnyRef:
+		Collections
+		Classes
+		String
+Nothing: subclass of every class, return nothing for example
+Null: subclass of every AnyRef class, used as null
+Unit: no data, literal: (), used as void
+

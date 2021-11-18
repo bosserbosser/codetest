@@ -1,0 +1,16 @@
+#!/usr/bin/env scala
+
+object Classes {
+	implicit class Data(num:Int) {
+		def double = num*2;
+		def pow = (p:Int) => math.pow(num,p).toInt;
+	}
+}
+
+import Classes._
+
+val n: Data = 3
+println(n.getClass)
+println("double: " + n.double, " pow 2: " + n.pow(2))
+println(n.isInstanceOf[Data])
+

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+function loop() {
+	while true; do :; done
+}
+
+loop &
+loop &
+loop &
+

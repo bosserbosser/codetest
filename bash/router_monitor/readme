@@ -1,0 +1,1 @@
+command: ./router_monitor.sh >>/dev/null &

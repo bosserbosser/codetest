@@ -1,0 +1,14 @@
+all:
+	edit
+	build
+	run
+
+edit:
+	vim tmp.scala
+
+build:
+	scalac tmp.scala
+
+run:
+	scala Main
+

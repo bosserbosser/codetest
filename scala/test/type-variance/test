@@ -1,0 +1,30 @@
+#!/usr/bin/env scala
+
+class Base {
+	def says() = println("im base");
+}
+class Mid extends Base {
+	override def says() = println("im mid");
+}
+class Sub extends Mid {
+	override def says() = println("im sub");
+}
+
+// ++++++++++++++++++++++++++++++++++
+
+class Item[+T](data: T) {
+	def get: T = data;
+};
+
+val item: Item[Base] = new Item[Sub](new Sub);
+
+// ----------------------------------
+
+class Processor[-T <: Mid] {
+	def apply(data:T) = {print("data says that: "); data.says()};
+}
+
+//val processor: Processor[Sub] = new Processor[Sub]; processor(new Sub)
+//val processor: Processor[Base] = new Processor[Base]; processor(new Sub)
+val processor: Processor[Sub] = new Processor[Mid]; processor(new Sub)
+

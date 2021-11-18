@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -- 'i am bosser' 'yes, you are' 'no, you are not'
+
+args=("$@")
+
+echo "$@"
+echo ${args[0]}
+echo ${@:1:2}
+echo ${@:1:$#}
+

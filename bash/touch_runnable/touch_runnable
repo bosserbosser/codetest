@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+file_path=$1
+runner=$2
+
+touch $file_path
+echo "#!/usr/bin/env $runner" > $file_path
+chmod u+x $file_path
+

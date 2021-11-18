@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+
+chain_size = 99
+int_min = 0
+int_max = 10000 * 10000
+
+from random import randint
+
+def mybin(n, bin=bin):
+	return bin(n).replace('0b', '')
+bin = mybin
+
+num_chain = [randint(int_min, int_max) for i in range(chain_size)]
+mask = 0
+print '+'*20
+for num in num_chain:
+	mask = mask ^ num
+	#print '+ %d: %d' % (num, mask)
+	print '+ %s: %s' % (bin(num), mybin(mask))
+print '-'*20
+for num in sorted(num_chain, cmp=lambda x,y:randint(-1,1)):
+	mask = mask ^ num
+	#print '- %d: %d' % (num, mask)
+	print '- %s: %s' % (bin(num), mybin(mask))
+

@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+echo "List files recursively as bellow:"
+
+function list_files() {
+	parent="$1"
+	target="$2"
+	parent="$(echo $parent | sed -r -e 's#/{1,}#/#g' -e 's#/$##g')"
+	#echo "parent=$parent, target=$target"
+	if [ "$parent" != "" ]; then
+		parent="$parent/"
+	fi
+	if [ -d "$parent$target" ]; then
+		echo "name($parent$target), type(dir)"
+		for child in "$parent$target"/*; do
+			#echo "child=$child, \$parent\$target=$parent$target"
+			child="$(echo $child | sed -r "s#$parent$target/##g")"
+			#echo "child=$child"
+			list_files "$parent$target" "$child"
+		done
+	else
+		echo "name($parent$target), type(file)"
+	fi
+	return 0
+}
+
+list_files "" "$1"
+

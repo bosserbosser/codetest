@@ -1,0 +1,13 @@
+#!/usr/bin/env scala
+
+var f: Int=>Int = x=>x*x
+f = _*2
+println(f(10))
+
+//var add = (ints:Int*) => {var rst=0; for(int <- ints){rst+=int}; rst}
+//var add: (ints:Int*)=>Int = {var rst=0; for(int <- ints){rst+=int}; rst}
+def add(ints:Int*) = {var rst=0; for(int <- ints){rst+=int}; rst}
+println(add(1,2,3))
+
+var s = ""
+

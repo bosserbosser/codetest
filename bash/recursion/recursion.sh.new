@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+function fib() {
+	#echo "\$1=$1"
+	if [ $1 -eq 1 -o $1 -eq 2 ]; then
+		echo 1
+	else
+		echo $[ $(fib $[$1-2]) + $(fib $[$1-1]) ]
+	fi
+}
+
+for ((i=1;i<=16;++i)); do
+	result=$(fib $i)
+	echo "fib($i) = $result"
+done
+

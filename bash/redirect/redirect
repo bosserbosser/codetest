@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+while true; do
+	echo ''
+	echo -n 'INF TIME - '; date +'%T.%N'
+	echo -n 'ERR TIME - ' 1>&2; date +'%T.%N' 1>&2
+	sleep 1
+done
+

@@ -1,0 +1,11 @@
+#!/usr/bin/env python
+
+from common import *
+
+def cat():
+    for each in es_cli.search(index=index_name, body={})['hits']['hits']:
+        print each['_source']
+
+if __name__ == '__main__':
+    cat()
+

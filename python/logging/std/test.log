@@ -1,0 +1,37 @@
+2020-11-08 19:45:54,023 - DEBUG - log.py[:15] - this is deb
+2020-11-08 19:45:54,024 - INFO - log.py[:16] - this is inf
+2020-11-08 19:45:54,024 - WARNING - log.py[:17] - this is war
+2020-11-08 19:45:54,024 - ERROR - log.py[:18] - this is err
+2020-11-08 19:46:07,991 - DEBUG - log.py[:15] - this is deb
+2020-11-08 19:46:07,991 - INFO - log.py[:16] - this is inf
+2020-11-08 19:46:07,992 - WARNING - log.py[:17] - this is war
+2020-11-08 19:46:07,992 - ERROR - log.py[:18] - this is err
+2020-11-08 19:46:07,992 - INFO - log.py[:20] - this is inf too
+2020-11-08 19:58:20,289 - DEBUG - log.py[:22] - this is deb
+2020-11-08 19:58:20,289 - INFO - log.py[:23] - this is inf
+2020-11-08 19:58:20,290 - WARNING - log.py[:24] - this is war
+2020-11-08 19:58:20,290 - ERROR - log.py[:25] - this is err
+2020-11-08 19:58:20,290 - INFO - log.py[:27] - this is inf too
+2020-11-08 19:59:48 - DEBUG - log.py[:22] - this is deb
+2020-11-08 19:59:48 - INFO - log.py[:23] - this is inf
+2020-11-08 19:59:48 - WARNING - log.py[:24] - this is war
+2020-11-08 19:59:48 - ERROR - log.py[:25] - this is err
+2020-11-08 19:59:48 - INFO - log.py[:27] - this is inf too
+2020-11-08 19:59:58 - DEBUG - log.py[:22] - this is deb
+2020-11-08 19:59:58 - INFO - log.py[:23] - this is inf
+2020-11-08 19:59:58 - WARNING - log.py[:24] - this is war
+2020-11-08 19:59:58 - ERROR - log.py[:25] - this is err
+2020-11-08 19:59:58 - INFO - log.py[:27] - this is inf too
+2020-11-08 20:01:40 - DEBUG - log.py[:23] - this is deb
+2020-11-08 20:01:40 - INFO - log.py[:24] - this is inf
+2020-11-08 20:01:40 - WARNING - log.py[:25] - this is war
+2020-11-08 20:01:40 - ERROR - log.py[:26] - this is err
+2020-11-08 20:01:40 - INFO - log.py[:28] - this is inf too
+2020-11-08 20:04:39 - DEBUG - client.py[:8] - msg debug
+2020-11-08 20:04:39 - INFO - client.py[:9] - msg info
+2020-11-08 20:04:39 - WARNING - client.py[:10] - msg warning
+2020-11-08 20:04:39 - ERROR - client.py[:11] - msg error
+2020-11-08 20:05:18 - DEBUG - client.py[:8] - msg debug
+2020-11-08 20:05:18 - INFO - client.py[:9] - msg info
+2020-11-08 20:05:18 - WARNING - client.py[:10] - msg warning
+2020-11-08 20:05:18 - ERROR - client.py[:11] - msg error

@@ -1,0 +1,20 @@
+#!/usr/bin/env scala
+
+def reversed[A](list: List[A]): List[A] = list match {
+	case x if x.isEmpty => x;
+	case _ => list.tail :+ list.head;
+}
+
+def printListInner[A](list: List[A]): Unit = list match {
+	case x if x.isEmpty => {};
+	case x if x.tail.isEmpty => print(x.head);
+	case _ => print(list.head); print(","); printListInner[A](list.tail);
+}
+
+def printList[A](list: List[A]): Unit = {
+	print("["); printListInner(list); print("]\n");
+}
+
+val l = List(1,2,3)
+printList(l)
+

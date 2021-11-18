@@ -1,0 +1,8 @@
+#!/usr/bin/env scala
+
+val n = 9
+println(n.isInstanceOf[Int])
+println(n.asInstanceOf[Float])
+//println(n.asInstanceOf[String])
+println(n.hashCode)
+

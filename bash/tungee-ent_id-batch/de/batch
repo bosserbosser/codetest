@@ -1,0 +1,3 @@
+while read id; do
+    tungee-ent_id de "$id"
+done < ids

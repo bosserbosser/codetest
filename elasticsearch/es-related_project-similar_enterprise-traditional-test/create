@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+
+from common import *
+
+index_definition = {
+    "mappings": {
+        "properties": {
+            "type": {"type": "keyword"},
+            "name": {"type": "keyword"},
+            "nameId": {"type": "keyword"},
+            "subjectMatter": {"type": "keyword"},
+            "aheadSubjectMatter": {"type": "keyword"},
+            "subjectMatterLatestTime": {"type": "long"},
+            "aheadSubjectMatterLatestTime": {"type": "long"},
+        }
+    }
+}
+
+def create():
+    es_cli.indices.create(index=index_name, body=index_definition)
+
+if __name__ == '__main__':
+    create()
+

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+hdfs=centos0
+yarn=centos0
+mapred=centos0
+
+host=centos0
+
+roles=
+case $host in
+	$hdfs)
+		roles="$roles hdfs"
+		;;&
+	$yarn)
+		roles="$roles yarn"
+		;;&
+	$mapred)
+		roles="$roles mapred"
+		;;
+esac
+
+echo "roles: <$roles>"
+

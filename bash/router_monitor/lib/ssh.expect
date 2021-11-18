@@ -1,0 +1,14 @@
+#!/usr/bin/env expect
+
+set host [lindex $argv 0]
+set username [lindex $argv 1]
+set password [lindex $argv 2]
+set cmd [lindex $argv 3]
+set ssh_logged_mark [lindex $argv 4]
+
+spawn ssh $username@$host $cmd
+expect {
+	"yes/no" { send "yes\n"; exp_continue }
+	"password" { send "$password\n"; puts "\n$ssh_logged_mark\n"; exp_continue }
+}
+
