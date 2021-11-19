@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-abc.def=9
+abc_def=9
 
-echo ${abc.def}
+echo ${abc_def}
 
